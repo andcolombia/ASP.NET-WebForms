@@ -28,22 +28,6 @@ namespace WebApplication3
         {
             if (Request.IsAuthenticated)
             {
-                var url = Session["url"]?.ToString();
-                if (string.IsNullOrEmpty(url))
-                {
-                    Session["url"] = "Claims.aspx";
-                    string redirectUri = ConfigurationManager.AppSettings["redirectUri"];
-                    var authenticationProperties = new AuthenticationProperties();
-                    authenticationProperties.RedirectUri = redirectUri;
-                    var auth = HttpContext.Current.GetOwinContext().Authentication;
-                    auth.Challenge(authenticationProperties);
-                }
-                else
-                {
-                    Session["url"] = string.Empty;
-                    
-                }
-
                 var httpClient = new HttpClient();
                 var userInfo = new UserInfoRequest();
 

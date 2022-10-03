@@ -39,7 +39,10 @@ namespace WebApplication1
 
             app.UseCookieAuthentication(new CookieAuthenticationOptions()
             {
-                AuthenticationType = "Cookies"
+                AuthenticationType = "Cookies",
+                ExpireTimeSpan = TimeSpan.FromMinutes(20),
+                SlidingExpiration = true,
+                CookieSameSite = SameSiteMode.None
             });
             app.UseOpenIdConnectAuthentication(
                 new OpenIdConnectAuthenticationOptions

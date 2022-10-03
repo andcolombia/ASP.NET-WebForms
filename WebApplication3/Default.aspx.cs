@@ -31,11 +31,6 @@ namespace WebApplication3
             }
             else
             {
-                var url = Session["url"]?.ToString();
-                if (!string.IsNullOrEmpty(url))
-                {
-                    Response.Redirect(url);
-                }
                 var userClaims = User.Identity as System.Security.Claims.ClaimsIdentity;
                 var user = userClaims.FindFirst("aud");
                 this.LoginDiv.Visible = false;

@@ -175,6 +175,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Claims.aspx" />
+    <Content Include="FrontChannelLogout.aspx" />
     <Content Include="SignOut.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -244,6 +245,13 @@
     </Compile>
     <Compile Include="Claims.aspx.designer.cs">
       <DependentUpon>Claims.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontChannelLogout.aspx.cs">
+      <DependentUpon>FrontChannelLogout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontChannelLogout.aspx.designer.cs">
+      <DependentUpon>FrontChannelLogout.aspx</DependentUpon>
     </Compile>
     <Compile Include="SignOut.aspx.cs">
       <DependentUpon>SignOut.aspx</DependentUpon>
